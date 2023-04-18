@@ -1,15 +1,15 @@
 package br.com.DTO;
 
-public class Carro {
+public class CarroDTO {
 
     private int id;
     private String modelo;
     private String placa;
 
-    public Carro() {
+    public CarroDTO() {
     }
 
-    public Carro(String modelo, String placa) {
+    public CarroDTO(String modelo, String placa) {
         this.modelo = modelo;
         this.placa = placa;
     }

@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.DTO.CarroDTO;
+
 public class CarroDAO {
 
     private Connection conexao;
@@ -15,7 +17,7 @@ public class CarroDAO {
         conexao = ConnectionDAO.getConnection();
     }
 
-    public void adicionar(Carro carro) {
+    public void adicionar(CarroDTO carro) {
         String sql = "INSERT INTO carros (modelo, placa) VALUES (?, ?)";
 
         try {
@@ -29,7 +31,7 @@ public class CarroDAO {
         }
     }
 
-    public void alterar(Carro carro) {
+    public void alterar(CarroDTO carro) {
         String sql = "UPDATE carros SET modelo=?, placa=? WHERE id=?";
 
         try {
@@ -57,16 +59,16 @@ public class CarroDAO {
         }
     }
 
-    public List<Carro> listar() {
+    public List<CarroDTO> listar() {
         String sql = "SELECT * FROM carros";
-        List<Carro> carros = new ArrayList<Carro>();
+        List<CarroDTO> carros = new ArrayList<CarroDTO>();
 
         try {
             PreparedStatement stmt = conexao.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
-                Carro carro = new Carro();
+                CarroDTO carro = new CarroDTO();
                 carro.setId(rs.getInt("id"));
                 carro.setModelo(rs.getString("modelo"));
                 carro.setPlaca(rs.getString("placa"));
