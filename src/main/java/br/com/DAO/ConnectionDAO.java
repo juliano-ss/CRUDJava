@@ -26,4 +26,8 @@ public class ConnectionDAO {
         return con;
     }
 
+    public static Connection getConnection() {
+        return null;
+    }
+
 }
