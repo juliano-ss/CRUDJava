@@ -11,7 +11,7 @@ import br.com.DTO.CarroDTO;
 
 public class CarroDAO {
 
-    private Connection conexao;
+    public Connection conexao;
 
     public CarroDAO() {
         conexao = ConnectionDAO.getConnection();
