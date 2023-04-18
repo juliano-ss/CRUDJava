@@ -15,6 +15,7 @@ public class CarroDAO {
 
     public CarroDAO() {
         conexao = ConnectionDAO.getConnection();
+
     }
 
     public void adicionar(CarroDTO carro) {
