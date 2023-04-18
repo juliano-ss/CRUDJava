@@ -11,7 +11,7 @@ public class CarroDAO {
 
     private Connection conexao;
 
-    public carroDAO() {
+    public CarroDAO() {
         conexao = ConnectionDAO.getConnection();
     }
 
