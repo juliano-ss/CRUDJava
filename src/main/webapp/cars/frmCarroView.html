@@ -10,6 +10,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        
+        <form action="inserirCarro.jsp" method="POST">
+            <label>Modelo carro: </label> </br>
+            <input type="text" name="modelo"> </br>
+            <label>Placa carro: </label> </br>
+            <input type="text" name="placa"> </br>
+
+            <label>Escolha uma opção: </label>
+            <select name="opcao">
+                <option value="cadastrar">Cadastrar</option>
+                <option value="buscar">Buscar</option>
+                <option value="atualizar">Atualizar</option>
+                <option value="excluir">Excluir</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+        </form>
+
     </body>
 </html>
