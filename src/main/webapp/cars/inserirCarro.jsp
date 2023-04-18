@@ -4,6 +4,8 @@
     Author     : jotal
 --%>
 
+<%@page import="br.com.DAO.CarroDAO"%>
+<%@page import="br.com.DTO.CarroDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,14 +14,20 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="inserirCarro.jsp" method="POST">
-            
-            <label>Modelo carro: </label></br>
-            <input type="text" modelo="modelo"></br>
-            <label>Placa carro: </label></br>
-            <input type="text" placa="placa"></br>
-            
-            <button type="submit">CADASTRAR</button>
+        
+        <%
+           try {
+                  CarroDTO carroDTO = new CarroDTO();
+                      carroDTO.setModelo(request.getParameter("modelo"));
+                      carroDTO.setPlaca(request.getParameter("placa"));
+
+                      CarroDAO carroDAO = new CarroDAO();
+                      carroDAO.adicionar(carroDTO);
+               } catch (Exception e) {
+               }
+
+        %>   
+        
         </form>
     </body>
 </html>

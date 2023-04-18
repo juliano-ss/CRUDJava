@@ -13,7 +13,7 @@ public class CarroDAO {
 
     public Connection conexao;
 
-    public CarroDAO() {
+    public CarroDAO() throws SQLException {
         conexao = ConnectionDAO.getConnection();
 
     }
