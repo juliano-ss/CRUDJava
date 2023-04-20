@@ -62,7 +62,7 @@ public class CarroDAO {
 
     public ArrayList<CarroDTO> listar() {
         String sql = "SELECT * FROM carros";
-        ArrayList<CarroDTO> list = new ArrayList();
+        ArrayList<CarroDTO> list = new ArrayList<>();
 
         try {
             PreparedStatement stmt = conexao.prepareStatement(sql);

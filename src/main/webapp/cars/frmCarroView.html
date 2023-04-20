@@ -13,34 +13,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         
         <form action="inserirCarro.jsp" method="POST">
 
-            <label>Modelo carro: </label></br>
-            <input type="text" name="modelo"></br>
-            <label>Placa carro: </label></br>
-            <input type="text" name="placa"></br>
+            <label>Modelo carro: </label><br>
+            <input type="text" name="modelo"><br>
+            <label>Placa carro: </label><br>
+            <input type="text" name="placa"><br>
             <button type="submit">CADASTRAR</button>
-            
+
         </form>
-        
-        <!--<form action="inserirCarro.jsp" method="POST">
-            <label>Modelo carro: </label> </br>
-            <input type="text" name="modelo"> </br>
-            <label>Placa carro: </label> </br>
-            <input type="text" name="placa"> </br>
-        
-            <button type="submit">BUSCAR</button>
-            <button type="submit">ATUALIZAR</button>
-            <button type="submit">EXCLUIR</button>
-
-            <label>Escolha uma opção: </label>
-            <select name="opcao">
-                <option value="cadastrar">Cadastrar</option>
-                <option value="buscar">Buscar</option>
-                <option value="atualizar">Atualizar</option>
-                <option value="excluir">Excluir</option>
-            </select>
-
-            <button type="submit">Enviar</button>
-        </form> -->
+        <form action="listarCarros.jsp" method="GET">
+            <button type="submit">Listar carros</button>
+        </form>
 
     </body>
 </html>

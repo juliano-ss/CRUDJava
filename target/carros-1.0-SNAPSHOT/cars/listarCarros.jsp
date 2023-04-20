@@ -4,7 +4,8 @@
     Author     : jotal
 --%>
 
-<%@page import="java.util.List"%>
+
+
 <%@page import="br.com.DTO.CarroDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="br.com.DAO.CarroDAO"%>
@@ -20,12 +21,21 @@
         <%
          try {
                  CarroDAO carroDAO = new CarroDAO();
-                 List<CarroDTO> lista = carroDAO.listar();
+                 ArrayList<CarroDTO> list = carroDAO.listar();
 
-                 for (int num = 0; num < lista.size(); num++) {
-                     out.print("Código: " + lista.get(num).getId() + "</br");
-                     out.print("Modelo: " + lista.get(num).getModelo() + "</br");
-                     out.print("Placa: " + lista.get(num).getPlaca() + "</br");
+                 for (int num = 0; num < list.size(); num ++) {
+                     out.print("Código: " + list.get(num).getId() + "<br>");
+                     out.print("Modelo: " + list.get(num).getModelo() + "<br>");
+                     out.print("Placa: " + list.get(num).getPlaca() + "<br>");
+                     
+                     out.print("<a href=' frmExcluirCarro.jsp?id="
+                     + list.get(num).getId() + "&nome="
+                     + list.get(num).getModelo()
+                     + list.get(num).getPlaca() + "'>Excluir </a>");
+                     
+                     
+       %>   <br><br>     <%
+                     
                  }
 
              } catch (Exception e) {
