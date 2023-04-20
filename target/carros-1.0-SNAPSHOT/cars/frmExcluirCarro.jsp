@@ -14,7 +14,7 @@
     </head>
     <body>
         
-        <form action="excluirCarro.jsp" method="POST" id="form-excluir" style="display:none">
+        <form action="excluirCarro.jsp" method="POST">
             <label>Código do carro: </label><br>
             <input type="number" name="id"><br>
             <button type="submit">Alterar</button>

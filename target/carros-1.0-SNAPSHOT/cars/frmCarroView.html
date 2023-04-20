@@ -11,17 +11,94 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     </head>
     <body>
         
+        <style>
+    body {
+        background-color: #f7f7f7;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    #form-inserir {
+        background-color: rgba(87,169,208);
+        padding: 20px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 50%;
+        width: 50%;
+        max-width: 500px;
+    }
+
+    #form-inserir label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    #form-inserir input[type="text"] {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 9px;
+    }
+
+    .b1 {
+        background-color: green;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 9px;
+        font-size: 14px;
+        cursor: pointer;
+        height: 43px;
+        width: 140px;
+    }
+    
+
+    #form-listar {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    .b2 {
+        background-color: blueviolet;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        height: 44px;
+        width: 140px;
+    }
+
+    @media (max-width: 768px) {
+        #form-inserir {
+            height: 70%;
+            width: 70%;
+        }
+    }
+        </style>
+
+
+        
         <form action="inserirCarro.jsp" method="POST" id="form-inserir">
             <label>Modelo carro: </label><br>
             <input type="text" name="modelo"><br>
             <label>Placa carro: </label><br>
             <input type="text" name="placa"><br>
-            <button type="submit">CADASTRAR</button>
+            <div class="button-group">
+                <button type="submit" class="b1">CADASTRAR</button>
+                <button type="submit" class="b2">Listar Carros</button>
+            </div>
         </form>
-
-        <form action="listarCarros.jsp" method="GET" id="form-listar">
-            <button type="submit">Listar carros</button>
-        </form>
+        <form action="listarCarros.jsp" method="GET" id="form-listar"></form>
 
     </body>
 </html>

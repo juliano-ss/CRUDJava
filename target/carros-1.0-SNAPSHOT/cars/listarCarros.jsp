@@ -15,20 +15,49 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <style>
-            table {
-              border: 1px solid black;
-            }
-        </style>
+        
     </head>
     <body>
+        <style>
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-        <table border="1" >
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #ddd;
+}
+
+td {
+  font-size: 16px;
+  font-weight: bold;
+  width: 25%;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+        </style>
+
+        <table border="1">
             <tr>
                 <th>Código</th>
                 <th>Modelo</th>
                 <th>Placa</th>
                 <th>Ação</th>
+                <th></th>
             </tr>
             <%
                 try {
@@ -40,7 +69,7 @@
                         out.print("<td>" + list.get(num).getId() + "</td>");
                         out.print("<td>" + list.get(num).getModelo() + "</td>");
                         out.print("<td>" + list.get(num).getPlaca() + "</td>");
-                        out.print("<td><a href='frmExcluirCarro.jsp?id="
+                        out.print("<td><a href='excluirCarro.jsp?id="
                                 + list.get(num).getId() + "&modelo="
                                 + list.get(num).getModelo() + "&placa="
                                 + list.get(num).getPlaca()
@@ -50,7 +79,7 @@
                                 + list.get(num).getId() + "&modelo="
                                 + list.get(num).getModelo() + "&placa="
                                 + list.get(num).getPlaca()
-                                + "'>Alterar</a></td>");
+                                + "'>Alterar</a>");
                                 
                         out.print("</tr>");
                     }
