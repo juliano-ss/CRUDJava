@@ -14,17 +14,11 @@
     </head>
     <body>
         
-        <%
-            try {
-                int id = Integer.parseInt(request.getParameter("id"));
-                CarroDAO carroDAO = new CarroDAO();
-                carroDAO.excluir(id);
-                
-            } catch (Exception e) {
-                
-            }
-        %>
+        <form action="frmExcluirCarro.jsp" method="POST" id="form-excluir" style="display:none">
+            <label>Código do carro a ser excluído: </label><br>
+            <input type="number" name="id"><br>
+            <button type="submit">Alterar</button>
+        </form>
 
-        
     </body>
 </html>
