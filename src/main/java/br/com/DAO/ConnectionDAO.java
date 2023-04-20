@@ -11,16 +11,21 @@ import java.sql.SQLException;
  */
 public class ConnectionDAO {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/tabela_carros";
-    private static final String USER = "root";
-    private static final String PASSWORD = "";
+    public static final String DRIVER = "com.mysql.jdbc.Driver";
+    public static final String URL = "jdbc:mysql://localhost:3306/tabela_carros";
+    public static final String USER = "root";
+    public static final String PASSWORD = "";
 
     public static Connection getConnection() throws SQLException {
+        
+        Connection con = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            return DriverManager.getConnection(URL, USER, PASSWORD);
+            Class.forName(DRIVER);
+            con = DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (ClassNotFoundException e) {
             throw new SQLException("Driver não encontrado", e);
         }
+        return con;
+        
     }
 }
