@@ -23,8 +23,10 @@
 
                       CarroDAO carroDAO = new CarroDAO();
                       carroDAO.adicionar(carroDTO);
+                      
                } catch (Exception e) {
                }
+               System.out.println("Carro cadastrado com sucesso: ");
 
         %>   
         

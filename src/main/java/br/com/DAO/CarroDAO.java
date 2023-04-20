@@ -30,6 +30,7 @@ public class CarroDAO {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        
     }
 
     public void alterar(CarroDTO carro) {
