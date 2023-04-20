@@ -1,6 +1,6 @@
 <%-- 
     Document   : alterarCarro
-    Created on : 20 de abr. de 2023, 00:20:46
+    Created on : 20 de abr. de 2023, 11:08:05
     Author     : jotal
 --%>
 
@@ -16,24 +16,19 @@
     <body>
         
         <%
-
-            try {
-                int id = Integer.parseInt(request.getParameter("id"));
-                String modelo = request.getParameter("modelo");
-                String placa = request.getParameter("placa");
-
-                CarroDTO carroDTO = new CarroDTO();
-                carroDTO.setId(id);
-                carroDTO.setModelo(modelo);
-                carroDTO.setPlaca(placa);
-
-                CarroDAO carroDAO = new CarroDAO();
-                carroDAO.alterar(carroDTO);
-
-                out.print("Carro alterado com sucesso!");
-            } catch (Exception e) {
-                out.print("Erro ao alterar carro: " + e.getMessage());
-            }
+          
+         try {
+             CarroDTO carroDTO = new CarroDTO();
+             carroDTO.setId(Integer.parseInt(request.getParameter("id")));
+             carroDTO.setModelo(request.getParameter("modelo"));
+             carroDTO.setPlaca(request.getParameter("placa"));
+             
+             CarroDAO carroDAO = new CarroDAO();
+             carroDAO.alterar(carroDTO);
+                 
+             } catch (Exception e) {
+             
+             }
 
         %>    
         

@@ -45,6 +45,13 @@
                                 + list.get(num).getModelo() + "&placa="
                                 + list.get(num).getPlaca()
                                 + "'>Excluir</a></td>");
+                                
+                                 out.print("<td><a href='frmAlterarCarro.jsp?id="
+                                + list.get(num).getId() + "&modelo="
+                                + list.get(num).getModelo() + "&placa="
+                                + list.get(num).getPlaca()
+                                + "'>Alterar</a></td>");
+                                
                         out.print("</tr>");
                     }
 
