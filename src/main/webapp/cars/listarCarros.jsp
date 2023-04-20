@@ -57,7 +57,7 @@ a:hover {
                 <th>Modelo</th>
                 <th>Placa</th>
                 <th>Ação</th>
-                <th></th>
+                <th>Ação</th>
             </tr>
             <%
                 try {
@@ -69,7 +69,7 @@ a:hover {
                         out.print("<td>" + list.get(num).getId() + "</td>");
                         out.print("<td>" + list.get(num).getModelo() + "</td>");
                         out.print("<td>" + list.get(num).getPlaca() + "</td>");
-                        out.print("<td><a href='excluirCarro.jsp?id="
+                        out.print("<td><a href='frmExcluirCarro.jsp?id="
                                 + list.get(num).getId() + "&modelo="
                                 + list.get(num).getModelo() + "&placa="
                                 + list.get(num).getPlaca()
@@ -79,7 +79,7 @@ a:hover {
                                 + list.get(num).getId() + "&modelo="
                                 + list.get(num).getModelo() + "&placa="
                                 + list.get(num).getPlaca()
-                                + "'>Alterar</a>");
+                                + "'>Alterar</a></td>");
                                 
                         out.print("</tr>");
                     }

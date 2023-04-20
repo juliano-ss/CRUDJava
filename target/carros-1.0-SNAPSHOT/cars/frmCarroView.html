@@ -54,16 +54,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         padding: 8px 9px;
         font-size: 14px;
         cursor: pointer;
-        height: 43px;
-        width: 140px;
+        height: 38px;
+        width: 136px;
+        margin-top: 10px;
+        margin-right: 5px;
+        text-decoration: none;
+        
     }
-    
+
 
     #form-listar {
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
         width: 80%;
+        
     }
 
     .b2 {
@@ -74,8 +79,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         padding: 10px 20px;
         font-size: 16px;
         cursor: pointer;
-        height: 44px;
-        width: 140px;
+        height: 38px;
+        width: 136px;
+        margin-left: 5px;
+        text-decoration: none;
     }
 
     @media (max-width: 768px) {
@@ -86,8 +93,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     }
         </style>
 
-
-        
         <form action="inserirCarro.jsp" method="POST" id="form-inserir">
             <label>Modelo carro: </label><br>
             <input type="text" name="modelo"><br>
@@ -95,10 +100,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             <input type="text" name="placa"><br>
             <div class="button-group">
                 <button type="submit" class="b1">CADASTRAR</button>
-                <button type="submit" class="b2">Listar Carros</button>
+                <a href="listarCarros.jsp" class="b2">Listar Carros</a>
             </div>
-        </form>
-        <form action="listarCarros.jsp" method="GET" id="form-listar"></form>
+        </form> 
+
+        
 
     </body>
 </html>
