@@ -4,6 +4,7 @@
     Author     : jotal
 --%>
 
+<%@page import="br.com.DAO.CarroDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,18 +14,17 @@
     </head>
     <body>
         
-        <form action="excluirCarro.jsp" method="POST">
+        <%
+            try {
+                int id = Integer.parseInt(request.getParameter("id"));
+                CarroDAO carroDAO = new CarroDAO();
+                carroDAO.excluir(id);
+                
+            } catch (Exception e) {
+                
+            }
+        %>
 
-            <label>Código do carro: </label><br>
-            <input type="text" name="id" value="<%=request.getParameter("id")%>"><br>
-            <label>Modelo do carro: </label><br>
-            <input type="text" name="modelo" value="<%=request.getParameter("modelo")%>"><br>
-            <label>Placa do carro: </label><br>
-            <input type="text" name="placa" value="<%=request.getParameter("placa")%>"><br>
-           
-            <button type="submit">Excluir</button>
-
-        </form>
         
     </body>
 </html>

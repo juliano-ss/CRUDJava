@@ -29,9 +29,10 @@
                      out.print("Placa: " + list.get(num).getPlaca() + "<br>");
                      
                      out.print("<a href=' frmExcluirCarro.jsp?id="
-                     + list.get(num).getId() + "&nome="
-                     + list.get(num).getModelo()
-                     + list.get(num).getPlaca() + "'>Excluir </a>");
+                     + list.get(num).getId() + "&modelo="
+                     + list.get(num).getModelo() + "&placa="
+                     + list.get(num).getPlaca()
+                     + "'>Excluir </a>");
                      
                      
        %>   <br><br>     <%

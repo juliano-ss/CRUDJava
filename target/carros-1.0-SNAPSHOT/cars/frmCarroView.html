@@ -10,7 +10,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        
+
         <form action="inserirCarro.jsp" method="POST">
 
             <label>Modelo carro: </label><br>
@@ -23,6 +23,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <form action="listarCarros.jsp" method="GET">
             <button type="submit">Listar carros</button>
         </form>
+
+        <form action="alterarCarro.jsp" method="POST">
+            <label>ID do carro: </label><br>
+            <input type="number" name="id"><br>
+            <label>Novo modelo do carro: </label><br>
+            <input type="text" name="modelo"><br>
+            <label>Nova placa do carro: </label><br>
+            <input type="text" name="placa"><br>
+            <button type="submit">ALTERAR</button>
+        </form>
+
+        <form action="frmExcluirCarro.jsp" method="POST">
+            <label>Código do carro a ser excluído: </label><br>
+            <input type="number" name="id"><br>
+            <button type="submit">Excluir</button>
+        </form>
+
 
     </body>
 </html>
