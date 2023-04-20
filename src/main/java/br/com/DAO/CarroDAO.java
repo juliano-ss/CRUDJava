@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
+//import java.util.List;
 
 import br.com.DTO.CarroDTO;
 
@@ -60,20 +60,20 @@ public class CarroDAO {
         }
     }
 
-    public List<CarroDTO> listar() {
+    public ArrayList<CarroDTO> listar() {
         String sql = "SELECT * FROM carros";
-        List<CarroDTO> carros = new ArrayList<CarroDTO>();
+        ArrayList<CarroDTO> list = new ArrayList();
 
         try {
             PreparedStatement stmt = conexao.prepareStatement(sql);
-            ResultSet rs = stmt.executeQuery();
+            ResultSet rs = stmt.executeQuery(sql);
 
             while (rs.next()) {
                 CarroDTO carro = new CarroDTO();
                 carro.setId(rs.getInt("id"));
                 carro.setModelo(rs.getString("modelo"));
                 carro.setPlaca(rs.getString("placa"));
-                carros.add(carro);
+                list.add(carro);
             }
 
             rs.close();
@@ -82,6 +82,6 @@ public class CarroDAO {
             throw new RuntimeException(e);
         }
 
-        return carros;
+        return list;
     }
 }
