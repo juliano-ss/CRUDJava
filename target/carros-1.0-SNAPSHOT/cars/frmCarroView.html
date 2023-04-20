@@ -10,21 +10,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-
-        <form action="inserirCarro.jsp" method="POST">
-
+        
+        <form action="inserirCarro.jsp" method="POST" id="form-inserir">
             <label>Modelo carro: </label><br>
             <input type="text" name="modelo"><br>
             <label>Placa carro: </label><br>
             <input type="text" name="placa"><br>
             <button type="submit">CADASTRAR</button>
-
         </form>
-        <form action="listarCarros.jsp" method="GET">
+
+        <form action="listarCarros.jsp" method="GET" id="form-listar">
             <button type="submit">Listar carros</button>
         </form>
 
-        <form action="alterarCarro.jsp" method="POST">
+        <form action="alterarCarro.jsp" method="POST" id="form-alterar" style="display:none">
             <label>ID do carro: </label><br>
             <input type="number" name="id"><br>
             <label>Novo modelo do carro: </label><br>
@@ -34,12 +33,34 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             <button type="submit">ALTERAR</button>
         </form>
 
-        <form action="frmExcluirCarro.jsp" method="POST">
+        <form action="frmExcluirCarro.jsp" method="POST" id="form-excluir" style="display:none">
             <label>Código do carro a ser excluído: </label><br>
             <input type="number" name="id"><br>
             <button type="submit">Excluir</button>
         </form>
 
+        <script>
+            // Função para exibir o formulário de alterar e ocultar os demais
+            function exibirFormAlterar() {
+                document.getElementById("form-alterar").style.display = "block";
+                document.getElementById("form-inserir").style.display = "none";
+                document.getElementById("form-listar").style.display = "none";
+                document.getElementById("form-excluir").style.display = "none";
+            }
 
+            // Função para exibir o formulário de excluir e ocultar os demais
+            function exibirFormExcluir() {
+                document.getElementById("form-alterar").style.display = "none";
+                document.getElementById("form-inserir").style.display = "none";
+                document.getElementById("form-listar").style.display = "none";
+                document.getElementById("form-excluir").style.display = "block";
+            }
+        </script>
+
+        
+        <button type="button" onclick="exibirFormAlterar()">Alterar Carros</button><br>
+        <button type="button" onclick="exibirFormExcluir()">Excluir Carros</button>
+    
+        
     </body>
 </html>
