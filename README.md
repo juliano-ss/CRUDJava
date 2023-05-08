@@ -31,7 +31,7 @@ permitindo ao usuário cadastrar, visualizar, alterar e excluir informações so
 
 ## Pré-requisitos
 
-Para executar o programa é necessário ter o Java Development Kit (JDK) instalado na máquina.
+Para executar o programa é necessário ter o Java Development Kit (JDK) instalado.
 
 ## Executando o programa
 
