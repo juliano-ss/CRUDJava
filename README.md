@@ -1,8 +1,6 @@
 # CRUDJava
 ![car registration java web](https://github.com/juliano-ss/CRUDJava/blob/main/src/main/CRUDcarros.png?raw=true)
 
-# Carros - CRUD Java Cadastro de carros
-
 Este projeto consiste em um sistema de cadastro de carros, desenvolvido em Java Web com o uso de JSP e Servlets. 
 A aplicação realiza as operações básicas de CRUD (Create, Read, Update, Delete),
 permitindo ao usuário cadastrar, visualizar, alterar e excluir informações sobre carros, modelo e placa.
