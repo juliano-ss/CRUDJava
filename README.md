@@ -35,4 +35,4 @@ Para executar o programa é necessário ter o Java Development Kit (JDK) instala
 
 Para executar a aplicação, é necessário configurar o servidor de aplicação (por exemplo, Tomcat) e o banco de dados (por exemplo, MySQL) de acordo com as informações presentes na classe ConnectionDAO.
 
-Este projeto foi desenvolvido com o objetivo de aplicar conceitos de Java Web e CRUD em um sistema básico de cadastro de carros, podendo ser utilizado como base para o desenvolvimento de projetos mais complexos e completos.
+Este projeto foi desenvolvido com o objetivo de aplicar conceitos de Java Web e CRUD em um sistema básico de cadastro de carros, podendo ser utilizado como base para o desenvolvimento de projetos mais complexos e completos. fique a vontade para dar um clone no projeto ou enviar sugestões.
